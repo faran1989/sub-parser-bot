@@ -58,7 +58,7 @@ def fetch_subscription(url: str) -> str:
         "User-Agent": "v2rayNG/1.8.5",
         "Accept": "*/*",
     }
-    resp = requests.get(url, headers=headers, timeout=20)
+    resp = requests.get(url, headers=headers, timeout=60)
     resp.raise_for_status()
     return resp.text.strip()
 
